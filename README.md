@@ -5,6 +5,6 @@ A personal finance dashboard built with Next.js, Tailwind CSS, Recharts, Lucide 
 ## Setup
 
 1. Install dependencies: `npm install`
-2. Add Supabase credentials to `.env.local`
+2. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to `.env.local`
 3. Run `supabase/schema.sql` in the Supabase SQL editor
 4. Start the app: `npm run dev`

@@ -11,6 +11,7 @@ import {
   WalletCards,
   LogOut,
 } from "lucide-react";
+import { logout } from "@/app/actions/auth";
 
 const links = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -50,10 +51,12 @@ export default function Sidebar() {
         })}
       </nav>
 
-      <button className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-50">
-        <LogOut size={18} />
-        Sign out
-      </button>
+      <form action={logout}>
+        <button className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-500 hover:bg-slate-50" type="submit">
+          <LogOut size={18} />
+          Sign out
+        </button>
+      </form>
     </aside>
   );
 }
